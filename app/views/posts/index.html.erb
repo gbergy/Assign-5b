@@ -1,0 +1,7 @@
+<h1>Posts</h1>
+
+<div>
+<% @posts.each do |post| %>
+	<%=render "post", post: post %>
+<% end %>
+</div>

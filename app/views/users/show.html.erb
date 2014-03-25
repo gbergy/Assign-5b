@@ -1,0 +1,5 @@
+<h1>Here is a specific user</h1>
+
+<%=render "user", user: @user %>
+
+<%=link_to "Delete User", user_path(params[:id]), method: :delete %>
