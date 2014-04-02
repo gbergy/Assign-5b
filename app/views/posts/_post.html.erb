@@ -1,8 +1,10 @@
-From: <%=post.user.fname%> <%=post.user.lname%>
+<%=post.title%>
 <br>
-Post Title: <%=post.title%> 
+<%=post.created_at%>
 <br>
-<br>
+<%=link_to "Profile", user_path(params[:user_id])%>
 
 
+<!-- %=link_to "Delete Post", user_post_path(params[:id]), method: :delete % -->
 
+<!--No route matches {:action=>"show", :controller=>"posts", :format=>nil, :id=>nil, :user_id=>"1"} missing required keys: [:id]-->

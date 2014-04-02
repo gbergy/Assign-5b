@@ -1,0 +1,8 @@
+<h1>Create a New Post</h1>
+
+<%=form_for [@user, @post] do |f| %> <!--undefined method `posts_path' RAILS assumes its not a nested resource-->
+	<%=f.label :title, "Title" %>
+ 	<%=f.text_field :title %>
+ 	<br>
+ 	<%=f.submit "Post It!" %> 
+<% end %>

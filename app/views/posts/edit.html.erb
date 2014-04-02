@@ -1,0 +1,8 @@
+<h1>Edit Profile</h1>
+
+<%=form_for [@post.user, @post], html: {method: :put} do |f| %>
+  <%=f.label :title, "Title" %>
+  <%=f.text_field :title %>
+  <br>
+  <%=f.submit "Update Post"%>
+ <%end%>

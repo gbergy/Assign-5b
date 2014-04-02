@@ -1,3 +1,7 @@
-<h1>Here is Post #{post_id} from #{user.fname}</h1>
+<h1>Specific Post</h1>
 
 <%=render "post", post: @post %>
+
+<%=link_to "Edit this", edit_user_post_path(@post.user, @post)%>
+
+<%=link_to "Delete this", user_post_path(@post.user, @post), method: :delete%>

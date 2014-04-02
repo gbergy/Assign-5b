@@ -11,6 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+ li {
+ 	display: inline;
+ }
+
 .flash {
 	width: 25%;
 	border: 2px solid yellow;

@@ -1,7 +1,17 @@
 <h1>Posts</h1>
 
 <div>
-<% @posts.each do |post| %>
-	<%=render "post", post: post %>
-<% end %>
+	<% @user.posts.each do |post| %>
+	  <%=post.title %>
+	  <br>
+	  <%=post.created_at.strftime("%b %d, %Y") %>
+	  <br>
+	  <%=link_to "This Post", user_post_path(post.user, post) %> 
+	  <%=link_to "Delete Post", user_post_path(post.user, post), method: :delete %>
+	  <br>
+	  <br>
+	<% end %>
 </div>
+
+<%=link_to "User Profile", user_path(params[:user_id])%>
+

@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Assignment4</title>
+  <title>Assign_5</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<nav>
+		<%=render "shared/nav"%>
+	</nav>
 	<% if flash[:notice] %>
 		<div class="flash notice">
 		<%=flash[:notice] %>
 		</div>
 	<% end %>
 
+	<% if flash[:alert] %>
+		<div class="flash notice">
+		<%=flash[:alert] %>
+		</div>
+	<% end %>
+	
+	<!--%=link_to "Log Out", logout_path, method: :delete) if current_user %-->
 <%= yield %>
 
 </body>

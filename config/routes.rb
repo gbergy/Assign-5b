@@ -1,7 +1,13 @@
 Assignment4::Application.routes.draw do
+  root "users#index"
   resources :users do
     resources :posts
   end
+  get "/search" => "home#search"
+  get "/log-in" => "sessions#new"
+  post "/log-in" => "sessions#create", as: :log_in 
+  get "/log-out" => "sessions#destroy", as: :log_out
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
